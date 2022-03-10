@@ -1,0 +1,10 @@
+{
+	"file": "include/linux/swap.h",
+	"version": "v0.1",
+	"linuxversion": "v5.10",
+	"notes": [{
+			"line": 442,
+			"note": "nr_swap_pages 表示系统上还剩下多少swap pages。total_swap_pages表示系统上总共有多少个swap pages。"
+		}
+	]
+}

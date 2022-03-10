@@ -1,0 +1,15 @@
+{
+	"file": "lib/llist.c",
+	"version": "v0.1",
+	"linuxversion": "v5.10",
+	"notes": [{
+		"line": 26,
+		"note": "初始化swap使用的bdi和page_cluster, page_cluser 一般为3。初始化swap使用的bdi和page_cluster, page_cluser 一般为。初始化swap使用的bdi和page_cluster, page_cluser 一般为。初始化swap使用的bdi和page_cluster, page_cluser 一般为。初始化swap使用的bdi和page_cluster, page_cluser 一般为。初始化swap使用的bdi和page_cluster, page_cluser 一般为。初始化swap使用的bdi和page_cluster, page_cluser 一般为。"
+	}, {
+		"line": 27,
+		"note": "对于每个有内存的node结点，创建一个kswpad%d的内核线程。对于每个有内存的node结点，创建一个kswpad%d的内核线程。对于每个有内存的node结点，创建一个kswpad%d的内核线程。对于每个有内存的node结点，创建一个kswpad%d的内核线程。对于每个有内存的node结点，创建一个kswpad%d的内核线程。对于每个有内存的node结点，创建一个kswpad%d的内核线程。对于每个有内存的node结点，创建一个kswpad%d的内核线程。对于每个有内存的node结点，创建一个kswpad%d的内核线程。对于每个有内存的node结点，创建一个kswpad%d的内核线程。"
+	}, {
+		"line": 79,
+		"note": "对于每个有内存的node结点，创建一个kswpad%d的内核线程。对于每个有内存的node结点，创建一个kswpad%d的内核线程。对于每个有内存的node结点，创建一个kswpad%d的内核线程。对于每个有内存的node结点，创建一个kswpad%d的内核线程。对于每个有内存的node结点，创建一个kswpad%d的内核线程。对于每个有内存的node结点，创建一个kswpad%d的内核线程。对于每个有内存的node结点，创建一个kswpad%d的内核线程。对于每个有内存的node结点，创建一个kswpad%d的内核线程。对于每个有内存的node结点，创建一个kswpad%d的内核线程。"
+	}]
+}

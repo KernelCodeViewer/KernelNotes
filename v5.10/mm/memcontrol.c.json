@@ -1,0 +1,12 @@
+{
+	"file": "mm/memcontrol.c",
+	"version": "v0.1",
+	"linuxversion": "v5.10",
+	"notes": [{
+		"line": 7315,
+		"note": "返回memcg中可用的swap pages个数。如果系统上cgroup_memory_noswap为true时，或者使用mem cgroup v1时，直接返回系统上可用的swap pages。如果使用的是mem cgroup v2时，返回memcg中可用的swap pages个数。"
+	}, {
+		"line": 7328,
+		"note": "判断page所属的mem cgroup中swap使用量是否已经足够多了。首先使用vm_swap_full函数判断机器上全局swap的使用量是否超过了50%。如果超过，直接返回true。然后，如果系统上cgroup_memory_noswap为true时，或者使用mem cgroup v1时，直接返回false。如果使用的是mem cgroup v2，判断swap的使用量是否超过了swap.high或者swap.max的一半，如果超过，返回true，否则，返回false。"
+	}]
+}

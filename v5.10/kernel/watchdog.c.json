@@ -1,0 +1,43 @@
+{
+        "linuxversion": "v5.10", 
+        "version": "v0.1", 
+        "notes": [
+                {
+                        "note": "当写/proc/sys/kernel/watchdog_cpumask接口时，调用该函数", 
+                        "line": 735
+                }, 
+                {
+                        "note": "单位是s", 
+                        "line": 294
+                }, 
+                {
+                        "note": "查看touch_ts变量在最近20秒的时间内，有没有被创建的watchdog更新过，如果没有就是线程没有调度，说明[watchdog/x]未得到运行机会，意味着CPU被霸占，调度器没有办法进行调度，也就发生了softlockup", 
+                        "line": 292
+                }, 
+                {
+                        "note": "get_softlockup_thresh()默认是20s", 
+                        "line": 298
+                }, 
+                {
+                        "note": "这个函数主要就是查看hrtimer_interrupts变量在时钟中断处理函数里有没有被更新,假如没有更新，就意味着中断出了问题，可能被错误代码长时间的关中断了。", 
+                        "line": 305
+                }, 
+                {
+                        "note": "如果两次NMI时，hrtimer_interrupts的值没有变化，说明irq未能正常触发，即发生了hardlock", 
+                        "line": 309
+                }, 
+                {
+                        "note": "在init/main.c中的函数kernel_init_freeable会调用此初始化函数", 
+                        "line": 742
+                }, 
+                {
+                        "note": "/proc/sys/kernel/watchdog_cpumask的处理函数", 
+                        "line": 726
+                }, 
+                {
+                        "note": "更新hrtimer_interrupts计数", 
+                        "line": 352
+                }
+        ], 
+        "file": "v5.10/kernel/watchdog.c"
+}

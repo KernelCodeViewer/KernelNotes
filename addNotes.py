@@ -25,6 +25,7 @@ def main():
     linuxversion = file.split('/')[0]
 
     if args.create:
+	# 添加一个新的文件，并写入第一条注释
         print "create " + file + " " + str(line) +" " + note +" linuxversion: " + linuxversion
         notes=[]
         n={'line':line,'note':note}
@@ -34,10 +35,12 @@ def main():
             json.dumps(f, indent=8, ensure_ascii=False)
             fw.write(unicode(json.dumps(f, indent=8, ensure_ascii=False)))
     else:
+	# 更新已有文件的注释
         print "update " + file + " " + str(line) +" " + note
         with io.open(file+'.json', "r", encoding="utf-8") as f:
             n = json.load(f)
             new_notes=[]
+	    # 如果存在该行代码的注释，需要删除它，使用本次更新的注释
 	    for n1 in n['notes']:
 		if n1['line'] != line:
         		new_notes.append(n1)

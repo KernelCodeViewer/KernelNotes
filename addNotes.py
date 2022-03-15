@@ -25,7 +25,7 @@ def main():
     linuxversion = file.split('/')[0]
 
     if args.create:
-        print "create " + file + " " + str(line) +" " + note +"linuxversion:" + linuxversion
+        print "create " + file + " " + str(line) +" " + note +" linuxversion: " + linuxversion
         notes=[]
         n={'line':line,'note':note}
         notes.append(n)
@@ -37,8 +37,15 @@ def main():
         print "update " + file + " " + str(line) +" " + note
         with io.open(file+'.json', "r", encoding="utf-8") as f:
             n = json.load(f)
+            new_notes=[]
+	    for n1 in n['notes']:
+		if n1['line'] != line:
+        		new_notes.append(n1)
+		else:
+			print "delete the old notes, line " + str(line)
             note={'line':line,'note':note}
-            n['notes'].append(note)
+	    new_notes.append(note)
+            n['notes'] = new_notes
             with io.open(file+'.json.new', "w", encoding="utf-8") as fw:
                 fw.write(json.dumps(n, indent=8, ensure_ascii=False))
 

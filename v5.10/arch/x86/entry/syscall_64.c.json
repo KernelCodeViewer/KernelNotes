@@ -1,0 +1,15 @@
+{
+        "linuxversion": "v5.10", 
+        "version": "v0.1", 
+        "notes": [
+                {
+                        "note": "系统调用表，初始化分为两部分，首先全部项初始化为__x64_sys_ni_syscall，其次，再按照asm/syscalls_64.h里的值，进行对应项的初始化。该数组的大小__NR_syscall_max，取决于asm/syscalls_64.h的内容，而asm/syscalls_64.h是根据文件arch/x86/entry/syscalls/syscall_64.tbl里的内容再编译时刻生成的。", 
+                        "line": 20
+                }, 
+                {
+                        "note": "crash中sys_call_table大小的计算方法:先寻找sys_call_table的起始地址，再查找下一个符号的地址，两者之间，都是sys_call_table的地址范围。", 
+                        "line": 27
+                }
+        ], 
+        "file": "v5.10/arch/x86/entry/syscall_64.c"
+}

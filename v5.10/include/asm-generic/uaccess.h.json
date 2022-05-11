@@ -1,0 +1,11 @@
+{
+        "linuxversion": "v5.10", 
+        "version": "v0.1", 
+        "notes": [
+                {
+                        "note": "set_fs()、get_fs()机制，在新的内核中已经删除，请参见：https://github.com/torvalds/linux/commit/967747bbc084b93b54e66f9047d342232314cd25", 
+                        "line": 99
+                }
+        ], 
+        "file": "v5.10/include/asm-generic/uaccess.h"
+}
